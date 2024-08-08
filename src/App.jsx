@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import Cookies from "js-cookie";
 import { jwtDecode } from "jwt-decode";
 import Navbar from "./Components/Navbar/Navbar";
+
 import {
   SchoolLoginContext,
   SchoolLoginContextProvider,

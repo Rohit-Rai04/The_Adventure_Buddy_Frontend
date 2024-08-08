@@ -1,7 +1,11 @@
 import axios from "axios";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-
+import { Link, useNavigate } from "react-router-dom";
+import image from "./contact.png"
+import { MdOutlineLocationOn } from "react-icons/md";
+import { BiSolidPhoneCall } from "react-icons/bi";
+import { CiMail } from "react-icons/ci";
+import styles from "./Contact.module.css"
 const Contact = () => {
   const navigate = useNavigate();
   const [inputValue, setInputValue] = useState({
@@ -28,50 +32,100 @@ const Contact = () => {
     );
     setTimeout(navigate("/"), 5000);
   };
+  const style = { color: "#2093BF", fontSize: "1.5em" }
+  
+
+
+
+
+
 
   return (
     <>
-      <h1>Get in touch</h1>
-      <h4>How can we support you? Just let us know!</h4>
-      <form onSubmit={submitHandler}>
-        <label htmlFor="name">Name</label>
-        <input
-          type="text"
-          name="name"
-          id="name"
-          value={inputValue.name}
-          onChange={handleChange}
-        />
-        <br />
-        <label htmlFor="mobilenumber">Mobile Number</label>
-        <input
-          type="number"
-          name="mobilenumber"
-          id="mobilenumber"
-          value={inputValue.mobilenumber}
-          onChange={handleChange}
-        />
-        <br />
-        <label htmlFor="email">Email</label>
-        <input
-          type="email"
-          name="email"
-          id="email"
-          value={inputValue.email}
-          onChange={handleChange}
-        />
-        <br />
-        <label htmlFor="query">Message</label>
-        <input
-          type="text"
-          name="query"
-          id="query"
-          value={inputValue.query}
-          onChange={handleChange}
-        />
-        <br />
-        <button>Submit</button>
-      </form>
+      <div className="flex justify-center items-center flex-col gap-3">
+      <h1 className="text-customColor text-4xl sm:text-6xl font-semibold">Get in touch</h1>
+      <h4 className="text-base text-greycolor sm:text-1xl font-medium">How can we support you? Just let us know!</h4>
+      </div>
+      <div id="contactImg" className="w-full flex flex-col justify-around lg:flex-row p-5  " >
+        <div className="   flex justify-around items-start  mt-5  mt-0">
+          <img className={styles.contactImg}  src={image} alt="" />
+         
+          
+        </div>
+        <form className="mt-20  lg:w-2/5 " onSubmit={submitHandler}>
+          <div className=" mb-5">
+            <label className="font-medium text-sm" htmlFor="name">Name</label>
+            <input
+              className="w-full h-8 rounded-lg px-2 drop-shadow-xl bg-contactBorderBg border-2 border-solid border-customColor"
+              type="text"
+              name="name"
+              id="name"
+              value={inputValue.name}
+              onChange={handleChange}
+            />
+          </div>
+
+          <div className="mb-5">
+            <label className="font-medium text-sm" htmlFor="mobilenumber">Mobile Number</label>
+            <input
+              className="w-full h-8 rounded-lg px-2 drop-shadow-xl bg-contactBorderBg border-2 border-solid border-customColor"
+              type="number"
+              name="mobilenumber"
+              id="mobilenumber"
+              value={inputValue.mobilenumber}
+              onChange={handleChange}
+            />
+          </div>
+
+          <div className="mb-5">
+            <label className="font-medium text-sm" htmlFor="email">Email</label>
+            <input
+              className="w-full h-8 rounded-lg px-2 drop-shadow-xl bg-contactBorderBg border-2 border-solid border-customColor"
+              type="email"
+              name="email"
+              id="email"
+              value={inputValue.email}
+              onChange={handleChange}
+            />
+          </div>
+
+          <div className="mb-5">
+            <label className="font-medium text-sm" htmlFor="query">Message</label>
+            <input
+              className="w-full h-8 rounded-lg px-2 drop-shadow-xl bg-contactBorderBg border-2 border-solid border-customColor"
+              type="text"
+              name="query"
+              id="query"
+              value={inputValue.query}
+              onChange={handleChange}
+            />
+          </div>
+
+          <button className="w-full h-8 rounded-lg focus:ring-white bg-blue-500 text-white text-sm">Submit</button>
+        </form>
+
+      </div >
+      {/* <div className=" flex">
+            <span className="mr-4 mt-2 "> <MdOutlineLocationOn style={style} /></span>
+            <p className="text-xs">   RISE Incubation Center, Nagar Nigam Premises,
+              <br /> <blockquote>Elit</blockquote>
+              <br />
+              <br />
+            </p>
+          </div>
+          <div className="flex">
+              
+          <span className="mr-3"><BiSolidPhoneCall style={style}/></span>
+            <Link className="text-sm mr-24">9335819313, 8527275665</Link>
+          </div > 
+        
+            <br />
+            
+            <div className="flex ml-2 ">
+              <span className=" mr-3 "><CiMail style={style}/></span>
+              <Link className="text-sm mr-16">connect@headventurebuddy.in</Link>
+            </div> */}
+
     </>
   );
 };
