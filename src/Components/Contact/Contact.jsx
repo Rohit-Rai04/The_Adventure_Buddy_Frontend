@@ -2,9 +2,9 @@ import axios from "axios";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import image from "./contact.png"
-import { MdOutlineLocationOn } from "react-icons/md";
-import { BiSolidPhoneCall } from "react-icons/bi";
-import { CiMail } from "react-icons/ci";
+// import { MdOutlineLocationOn } from "react-icons/md";
+// import { BiSolidPhoneCall } from "react-icons/bi";
+// import { CiMail } from "react-icons/ci";
 import styles from "./Contact.module.css"
 const Contact = () => {
   const navigate = useNavigate();
@@ -56,7 +56,7 @@ const Contact = () => {
           <div className=" mb-5">
             <label className="font-medium text-sm" htmlFor="name">Name</label>
             <input
-              className="w-full h-8 rounded-lg px-2 drop-shadow-xl bg-contactBorderBg border-2 border-solid border-customColor"
+              className="w-full h-8 outline-none rounded-lg px-2 drop-shadow-xl bg-contactBorderBg border-2 border-solid border-customColor"
               type="text"
               name="name"
               id="name"
@@ -68,7 +68,7 @@ const Contact = () => {
           <div className="mb-5">
             <label className="font-medium text-sm" htmlFor="mobilenumber">Mobile Number</label>
             <input
-              className="w-full h-8 rounded-lg px-2 drop-shadow-xl bg-contactBorderBg border-2 border-solid border-customColor"
+              className="w-full h-8 outline-none rounded-lg px-2 drop-shadow-xl bg-contactBorderBg border-2 border-solid border-customColor"
               type="number"
               name="mobilenumber"
               id="mobilenumber"
@@ -80,7 +80,7 @@ const Contact = () => {
           <div className="mb-5">
             <label className="font-medium text-sm" htmlFor="email">Email</label>
             <input
-              className="w-full h-8 rounded-lg px-2 drop-shadow-xl bg-contactBorderBg border-2 border-solid border-customColor"
+              className="w-full h-8 outline-none rounded-lg px-2 drop-shadow-xl bg-contactBorderBg border-2 border-solid border-customColor"
               type="email"
               name="email"
               id="email"
@@ -92,7 +92,7 @@ const Contact = () => {
           <div className="mb-5">
             <label className="font-medium text-sm" htmlFor="query">Message</label>
             <input
-              className="w-full h-8 rounded-lg px-2 drop-shadow-xl bg-contactBorderBg border-2 border-solid border-customColor"
+              className="w-full h-8 outline-none rounded-lg px-2 drop-shadow-xl bg-contactBorderBg border-2 border-solid border-customColor"
               type="text"
               name="query"
               id="query"
