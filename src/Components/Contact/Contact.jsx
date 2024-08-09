@@ -33,7 +33,7 @@ const Contact = () => {
     setTimeout(navigate("/"), 5000);
   };
   const style = { color: "#2093BF", fontSize: "1.5em" }
-  
+
 
 
 
@@ -43,14 +43,14 @@ const Contact = () => {
   return (
     <>
       <div className="flex justify-center items-center flex-col gap-3">
-      <h1 className="text-customColor text-4xl sm:text-6xl font-semibold">Get in touch</h1>
-      <h4 className="text-base text-greycolor sm:text-1xl font-medium">How can we support you? Just let us know!</h4>
+        <h1 className="text-customColor text-4xl sm:text-6xl font-semibold">Get in touch</h1>
+        <h4 className="text-base text-greycolor sm:text-1xl font-medium">How can we support you? Just let us know!</h4>
       </div>
       <div id="contactImg" className="w-full flex flex-col justify-around lg:flex-row p-5  " >
         <div className="   flex justify-around items-start  mt-5  mt-0">
-          <img className={styles.contactImg}  src={image} alt="" />
-         
-          
+          <img className={styles.contactImg} src={image} alt="" />
+
+
         </div>
         <form className="mt-20  lg:w-2/5 " onSubmit={submitHandler}>
           <div className=" mb-5">
